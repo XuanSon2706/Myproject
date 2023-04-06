@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Wellcome</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color: #088aea;">
+  <a class="navbar-brand" href="#">
+    <h1>Myproject</h1>
+  </a>
+</nav>
+
+
+<div class="container-fluid" style="padding-top: 35px;padding-bottom: 35px;">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Select a file to upload</h2>
+            <p>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                <ul>
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+                {% endif %}
+                {% endwith %}
+            </p>
+	    <form method="post" action="/" enctype="multipart/form-data" style="margin-right: 1089px;">
+            <dl>
+                <p>
+                    <input type="file" name="file" class="form-control" autocomplete="off" required>
+                </p>
+            </dl>
+            <p>
+                <input type="submit" value="Submit" class="btn btn-info">
+            </p>
+        </form>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="margin-bottom: 60px;">
+    <div class="row">
+        <div class="col-sm-12">
+            {% if filename %}
+            <div>
+                <img src="{{ url_for('display_image', filename=filename) }}" height="360" width="640px"">
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-danger text-white" style="border-left-width: 15px;border-left-style: solid;border-right-width: 1400px;border-right-style: solid;margin-bottom: 60px;">
+    <div class="row">
+        <div class="col-sm-12">
+            {% if b,c %}
+            <h1> Kết quả dự đoán </h1>
+            <p>Dự đoán: {{b}} </p>
+            <p>Độ chính xác : {{c}} (%)</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
