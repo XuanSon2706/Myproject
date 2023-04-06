@@ -1,0 +1,6 @@
+C:/Users/sonbu/Desktop/LVTN/Dataset_3D/LIDC/LIDC-IDRI-0195/nodule-1/images\slice-0.png
+C:/Users/sonbu/Desktop/LVTN/Dataset_3D/LIDC/LIDC-IDRI-0195/nodule-1/images\slice-1.png
+C:/Users/sonbu/Desktop/LVTN/Dataset_3D/LIDC/LIDC-IDRI-0195/nodule-1/images\slice-2.png
+C:/Users/sonbu/Desktop/LVTN/Dataset_3D/LIDC/LIDC-IDRI-0195/nodule-1/images\slice-3.png
+C:/Users/sonbu/Desktop/LVTN/Dataset_3D/LIDC/LIDC-IDRI-0195/nodule-1/images\slice-4.png
+C:/Users/sonbu/Desktop/LVTN/Dataset_3D/LIDC/LIDC-IDRI-0195/nodule-1/images\slice-5.png
